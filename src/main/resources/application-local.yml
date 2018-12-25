@@ -30,7 +30,18 @@ spring:
   properties:
     hibernate:
       dialect: org.hibernate.dialect.MySQL5Dialect    
-        
+  #Spring Boot Admin Client URL
+  boot:
+    admin:
+      client:
+        url: http://localhost:8091      
 logging:
   level:
     root: info
+    
+#most of the endpoints are not exposed by Actuator by default. You need to change your configuration in application.properties to expose them    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    

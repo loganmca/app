@@ -1,6 +1,6 @@
 spring:
   application:
-    name: main
+    name: app
   profiles:
     active: client
   cloud:
